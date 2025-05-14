@@ -1,0 +1,353 @@
+/* Chat.css */
+/* Replace your .chat-container with this */
+.chat-container {
+    display: flex;
+    height: 80vh;
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  
+  
+  /* Update sidebar styles */
+  .sidebar {
+    width: 32%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #f0f0f0;
+  }
+  
+  /* Make search bar match prototype */
+  .search-container2 {
+    padding: 10px;
+    background-color: #fff;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .search-input {
+    width: 78%;
+    padding: 8px 8px;
+    border: none;
+    border-radius: 20px;
+    background-color: #f5f5f5;
+    font-size: 14px;
+    outline: none;
+  }
+  
+  .search-button {
+    background: transparent;
+    border: none;
+    margin-left: 10px;
+    cursor: pointer;
+    color: #888;
+  }
+  
+  .chat-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+  }
+  
+  .chat-mode-selector {
+    display: flex;
+    border-top: 1px solid #eaeaea;
+    margin-top: auto;
+  }
+  
+  .chat-mode-button {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    background-color: #f8f8f8;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .chat-mode-button.active {
+    background: linear-gradient(to right, #ff8c8c, #ffb347);
+    color: rgb(2, 1, 1);
+  }
+  
+  .chat-mode-button:first-child {
+    border-right: 1px solid #0f0d0d;
+  }
+  
+  /* ChatHeader.css */
+  .chat-header {
+    padding: 15px;
+    background-color: #fff;
+    border-bottom: 1px solid #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .contact-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .contact-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+  }
+  
+  .chat-header h2 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  /* MessageList.css */
+  .message-list {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .message {
+    max-width: 70%;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .message-sent {
+    align-self: flex-end;
+  }
+  
+  .message-received {
+    align-self: flex-start;
+  }
+  
+  .message-content {
+    padding: 10px 15px;
+    border-radius: 18px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    word-break: break-word;
+  }
+  
+  .message-sent .message-content {
+    background: linear-gradient(to right, #c55abc, #e8b536);
+    color: white;
+    border-bottom-right-radius: 5px;
+  }
+  
+  .message-received .message-content {
+    background-color: white;
+    color: #333;
+    border-bottom-left-radius: 5px;
+  }
+  
+  .message-timestamp {
+    font-size: 10px;
+    color: #999;
+    margin-top: 5px;
+    align-self: flex-end;
+  }
+  
+  .message-sent .message-timestamp {
+    margin-right: 5px;
+  }
+  
+  .message-received .message-timestamp {
+    margin-left: 5px;
+  }
+  
+  .attachment-image {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 8px;
+    margin-top: 5px;
+  }
+  
+  /* MessageInput.css */
+  .message-input-container {
+    padding: 15px;
+    background-color: #fff;
+    border-top: 1px solid #eaeaea;
+  }
+  
+  .message-form {
+    display: flex;
+    align-items: center;
+  }
+  
+  .message-input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #eaeaea;
+    border-radius: 20px;
+    font-size: 14px;
+    outline: none;
+  }
+  
+  .send-button, .attachment-button, .emoji-button {
+    background: transparent;
+    border: none;
+    margin: 0 10px;
+    font-size: 18px;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  
+  .send-button:hover, .attachment-button:hover, .emoji-button:hover {
+    color: #e004d9;
+  }
+  
+  .attachments-preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .attachment-preview {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .attachment-preview-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .remove-attachment-button {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .emoji-picker {
+    position: absolute;
+    bottom: 65px;
+    background-color: white;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .emoji {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+  }
+  
+  .emoji:hover {
+    background-color: #f5f5f5;
+  }
+  
+  /* ContactList.css */
+  .contact-list {
+    flex: 1;
+    overflow-y: auto;
+  }
+  
+  .contact-item {
+    display: flex;
+    padding: 15px;
+    border-bottom: 1px solid #f5f5f5;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    transition: background-color 0.2s;
+  }
+  
+  .contact-item:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .contact-item.active {
+    background-color: #f0f0f0;
+  }
+  
+  .contact-avatar-container {
+    position: relative;
+    margin-right: 15px;
+  }
+  
+  .contact-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .status-indicator {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid white;
+  }
+  
+  .status-indicator.online {
+    background-color: #4caf50;
+  }
+  
+  .status-indicator.offline {
+    background-color: #9e9e9e;
+  }
+  
+  .contact-details {
+    flex: 1;
+    overflow: hidden;
+  }
+  
+  .contact-name {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 3px;
+  }
+  
+  .contact-last-message {
+    font-size: 13px;
+    color: #888;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }

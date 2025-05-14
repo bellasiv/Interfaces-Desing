@@ -1,0 +1,135 @@
+.top-five-section {
+  margin: 2rem 0;
+  position: relative;
+  padding: 0px 0px 0px 270px;
+  width: 100%;
+  max-width: calc(96% - 256px);
+}
+
+.top-five-title-container {
+  text-align: left;
+  margin-bottom: 0rem; 
+  margin-top: 8rem;
+
+}
+
+.top-five-title {
+  font-size: 3.8rem;
+  font-weight: 560;
+  color: #c87532;
+  margin-bottom: 1rem; 
+  font-family: 'AmstelvarAlpha';
+  /* font-style: italic; */
+}
+
+.top-five-title::after {
+  content: "  ♛ ";
+  font-size: 6rem;
+}
+
+.top-five-container {
+  position: relative;
+  width: 90%;
+  padding: 1rem 0;
+}
+
+.top-five-scroll {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding: 1rem 0.5rem;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+}
+
+.top-five-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.top-user-card {
+  position: relative;
+  min-width: 280px;
+  background: white;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+  scroll-snap-align: start;
+  padding: 1.3rem;
+}
+
+.top-user-card:hover {
+  transform: translateY(-5px);
+}
+
+.rank-badge {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #c56c00;
+  text-align: center;
+  margin-bottom: 0.2rem;
+}
+
+.card-content {
+  text-align: center;
+}
+
+.user-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 1rem;
+  margin: 0 auto 1rem;
+  border: 4px solid #f8f8f8;
+}
+
+.username {
+  font-size: 1.2rem;
+  font-weight: 100;
+  color: #666;
+}
+
+.scroll-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: #e19174;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 2;
+  opacity: 0.9;
+}
+
+.scroll-button:hover {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.scroll-button.prev {
+  left: 0;
+}
+
+.scroll-button.next {
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  .top-user-card {
+    min-width: 220px;
+  }
+  
+  .user-image {
+    width: 160px;
+    height: 160px;
+  }
+}

@@ -1,0 +1,21 @@
+:root {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  
+
+  color-scheme: light dark;
+  color: black;
+  background-color: #E2E0E1;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-image: url('./assets/fondo.png');
+  background-size: cover;
+  background-position: 50% 55%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}

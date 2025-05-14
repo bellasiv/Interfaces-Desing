@@ -1,0 +1,25 @@
+.feed1 {
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    gap: 6px; /* Más separación entre elementos */
+    padding: 90px 350px; /* Mueve todo el feed hacia abajo (Y) y a la derecha (X) */
+}
+
+.post {
+    background-color: #efeaed;
+    border-radius: 20px; /* Bordes más redondeados */
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 350px; /* Aumenta el tamaño de cada post */
+    height: 400px; /* Aumenta la altura de cada post */
+    position: relative; /* Permite mover individualmente */
+}
+
+.post img {
+    width: 100%;
+    height: 85%; /* Ajusta la altura de la imagen */
+    border-radius: 20px;
+    object-fit: cover;
+}
