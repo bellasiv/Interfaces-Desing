@@ -1,0 +1,42 @@
+.feed1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 90px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .feed1 {
+        padding: 20px;
+        grid-template-columns: 1fr;
+    }
+}
+
+.post {
+    background-color: #efeaed;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    min-height: 400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .post {
+        max-width: 100%;
+    }
+}
+
+.post img {
+    width: 100%;
+    height: 85%;
+    border-radius: 20px;
+    object-fit: cover;
+}

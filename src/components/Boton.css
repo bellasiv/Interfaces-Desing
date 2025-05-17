@@ -1,0 +1,33 @@
+.boton {
+    background-color: #bd6f33;
+    color: white;
+    padding: 10px 20px;
+    font-size: 28px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: block;
+    margin: 30px auto;
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .boton {
+        font-size: 24px;
+        padding: 8px 16px;
+        max-width: 280px;
+    }
+}
+
+.boton:hover {
+    background-color: #BF755A;
+}
+
+a {
+    text-decoration: none;
+}
