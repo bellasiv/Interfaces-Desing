@@ -1,60 +1,59 @@
 .menuPrincipal {
-    /* Base styles for all screen sizes */
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
     z-index: 1000;
     height: 60px;
-    width: 100%;
-    transition: all 0.3s ease;
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Mobile menu toggle button - hidden on desktop */
-/* .menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: #313131;
-    font-size: 24px;
-    cursor: pointer;
-    padding: 5px;
-    z-index: 1001;
-} */
+@media (max-width: 768px) {
+    .menuPrincipal {
+        padding: 10px;
+    }
+}
 
 .menu {
     display: flex;
     gap: 30px;
-    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        gap: 15px;
+    }
+    
+    .menu-item span {
+        display: none;
+    }
 }
 
 .menu-item {
     display: flex;
     align-items: center;
-    gap: 10px; 
+    gap: 10px;
     cursor: pointer;
     font-size: 16px;
     color: #313131;
     text-decoration: none;
-    padding: 8px 5px;
+    padding-bottom: 5px;
     position: relative;
-    transition: all 0.2s ease;
 }
 
 .menu-item .icon {
-    font-size: 22px;
-    min-width: 22px; /* Ensures consistent width even when text is hidden */
+    font-size: 25px;
 }
 
 .menu-item:hover {
     color: #ab2287;
-    transform: translateY(-2px);
 }
 
-/* Active state indicator */
 .menu-item.active {
     color: #ab2287;
 }
@@ -68,18 +67,22 @@
     height: 3px;
     background-color: #ab2287;
     border-radius: 2px;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .search-container1 {
     display: flex;
     align-items: center;
-    background: rgba(246, 245, 245, 0.9);
+    background: rgba(246, 245, 245, 0.736);
     border-radius: 30px;
-    padding: 3px 15px; 
-    border: 1px solid rgba(124, 121, 124, 0.7);
-    transition: all 0.3s ease;
-    flex: 0 1 200px; /* Allow search to shrink but limit expansion */
+    padding: 3px 15px;
+    border: 1px solid #7c797cb2;
+}
+
+@media (max-width: 768px) {
+    .search-container1 {
+        display: none;
+    }
 }
 
 .search-input {
@@ -87,12 +90,11 @@
     outline: none;
     padding: 7px;
     background: transparent;
-    width: 100%;
 }
 
 .search-icon {
     font-size: 18px;
-    color: #757575;
+    color: #e3dede;
     margin-left: 5px;
     cursor: pointer;
 }
@@ -101,111 +103,16 @@
     display: flex;
     align-items: center;
     text-decoration: none;
-    margin-left: 15px;
 }
 
 .profile-icon {
-    font-size: 32px;
+    font-size: 40px;
     color: #333;
     cursor: pointer;
-    transition: transform 0.2s ease;
 }
 
-.profile-icon:hover {
-    transform: scale(1.1);
-}
-
-/* Tablet & smaller desktop screens */
-@media (max-width: 1024px) {
-    .menuPrincipal {
-        left: 0;
-        width: 100%;
-        padding: 10px 15px;
-    }
-    
-    .menu {
-        gap: 20px; /* Reduced spacing */
-    }
-    
-    .search-container1 {
-        flex: 0 1 160px; /* Smaller search on medium screens */
-    }
-}
-
-/* Mobile screens */
-@media (max-width: 600px) {
-    .menuPrincipal {
-        padding: 10px;
-        justify-content: center;
-    }
-    
-    /* Show hamburger menu toggle */
-    .menu-toggle {
-        display: block;
-        position: absolute;
-        left: 10px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-    
-    /* Full-width mobile menu when open */
-    .menu {
-        position: fixed;
-        top: 60px; /* Below the header */
-        left: 0;
-        right: 0;
-        background-color: white;
-        flex-direction: column;
-        gap: 0;
-        width: 100%;
-        padding: 10px 0;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-        transform: translateY(-150%);
-        opacity: 0;
-        pointer-events: none;
-        z-index: 900;
-    }
-    
-    /* When menu is open */
-    .menu.open {
-        transform: translateY(0);
-        opacity: 1;
-        pointer-events: all;
-    }
-    
-    .menu-item {
-        width: 100%;
-        padding: 12px 20px;
-        justify-content: flex-start;
-    }
-    
-    .menu-item .icon {
-        font-size: 20px;
-        margin-right: 15px;
-    }
-    
-    /* Active indicator adjustments for mobile */
-    .menu-item.active::after {
-        height: 100%;
-        width: 4px;
-        top: 0;
-        left: 0;
-        bottom: auto;
-    }
-    
-    /* Search and profile centered in header */
-    .search-container1 {
-        flex: 0 1 140px;
-        padding: 2px 10px;
-    }
-    
-    .search-input {
-        font-size: 14px;
-        padding: 5px;
-        width: 100px;
-    }
-    
+@media (max-width: 768px) {
     .profile-icon {
-        font-size: 28px;
+        font-size: 30px;
     }
 }

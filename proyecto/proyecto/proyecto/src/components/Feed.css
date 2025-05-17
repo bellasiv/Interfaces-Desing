@@ -1,25 +1,42 @@
 .feed1 {
     display: grid;
-    overflow: hidden;
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
-    gap: 6px; /* Más separación entre elementos */
-    padding: 90px 350px; /* Mueve todo el feed hacia abajo (Y) y a la derecha (X) */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 90px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .feed1 {
+        padding: 20px;
+        grid-template-columns: 1fr;
+    }
 }
 
 .post {
     background-color: #efeaed;
-    border-radius: 20px; /* Bordes más redondeados */
+    border-radius: 20px;
     padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    width: 350px; /* Aumenta el tamaño de cada post */
-    height: 400px; /* Aumenta la altura de cada post */
-    position: relative; /* Permite mover individualmente */
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    min-height: 400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .post {
+        max-width: 100%;
+    }
 }
 
 .post img {
     width: 100%;
-    height: auto; /* Ajusta la altura de la imagen */
+    height: 85%;
     border-radius: 20px;
     object-fit: cover;
 }
