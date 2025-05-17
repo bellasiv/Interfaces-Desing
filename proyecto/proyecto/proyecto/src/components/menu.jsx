@@ -1,39 +1,50 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./menu.css";
-import { FaHome, FaMap, FaCrown, FaComments, FaCamera, FaSearch, FaUserCircle } from "react-icons/fa"; 
+import { FaHome, FaMap, FaCrown, FaComments, FaCamera, FaSearch, FaUserCircle, FaBars, FaTimes } from "react-icons/fa"; 
 
-const Menu = () => {
+const   Menu = () => {
   const location = useLocation();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const isActive = (path) => {
     return location.pathname === path ? "menu-item active" : "menu-item";
   };
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div className="menuPrincipal">
-      <div className="menu">
-        <Link to="/paginaPrincipal" className={isActive("/paginaPrincipal")}>
+      {/* Mobile menu toggle button */}
+      <button className="menu-toggle" onClick={toggleMenu}>
+        {isMenuOpen ? <FaTimes /> : <FaBars />}
+      </button>
+
+      {/* Navigation menu - adds 'open' class when menu is toggled on mobile */}
+      <div className={`menu ${isMenuOpen ? 'open' : ''}`}>
+        <Link to="/paginaPrincipal" className={isActive("/paginaPrincipal")} onClick={() => setIsMenuOpen(false)}>
           <FaHome className="icon" />
           <span>Home</span>
         </Link>
 
-        <Link to="/petMap" className={isActive("/petMap")}>
+        <Link to="/petMap" className={isActive("/petMap")} onClick={() => setIsMenuOpen(false)}>
           <FaMap className="icon" />
           <span>PetMap</span>
         </Link>
 
-        <Link to="/ranking" className={isActive("/ranking")}>
+        <Link to="/ranking" className={isActive("/ranking")} onClick={() => setIsMenuOpen(false)}>
           <FaCrown className="icon" />
           <span>Ranking</span>
         </Link>
 
-        <Link to="/chat" className={isActive("/chat")}>
+        <Link to="/chat" className={isActive("/chat")} onClick={() => setIsMenuOpen(false)}>
           <FaComments className="icon" />
           <span>Chat</span>
         </Link>
 
-        <Link to="/post" className={isActive("/post")}>
+        <Link to="/post" className={isActive("/post")} onClick={() => setIsMenuOpen(false)}>
           <FaCamera className="icon" />
           <span>Post</span>
         </Link>
@@ -51,4 +62,4 @@ const Menu = () => {
   );
 };
 
-export default Menu;
+export default Menu;  

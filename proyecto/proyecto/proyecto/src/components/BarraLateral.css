@@ -119,3 +119,25 @@
 ::-webkit-scrollbar-thumb:hover {
     background: #5c431d; 
 }
+
+
+/*movile style*/
+@media (max-width: 768px) {
+    .barraLateral {
+        align-items: center;
+        justify-content: end;
+    }
+
+    .logoContainer {
+        display: none;
+    }
+
+    .imagesContainer {
+    flex-direction: row; /* Ítems en fila */
+    padding: 0 0.5rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 0.5rem;
+  }
+  
+}
