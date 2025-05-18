@@ -1,0 +1,31 @@
+.letter-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+  height: 130vh;
+  margin-bottom: 30px; 
+  padding: 0 20px;
+}
+
+.letter-text {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 50px;
+  font-weight: bold;
+  color: #bf755a;
+  position: relative;
+  top: 79px; 
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .letter-container {
+    height: auto;
+    padding-top: 80px;
+  }
+
+  .letter-text {
+    font-size: 30px;
+    top: 0;
+  }
+}
