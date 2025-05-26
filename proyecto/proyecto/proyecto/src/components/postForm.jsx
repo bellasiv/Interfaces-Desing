@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./postForm.css";
 import friends from "../assets/friends.jpg"
 import location from "../assets/location.jpg"
-import musica from "../assets/musica.jpg"
+import musica from "../assets/musica.jpg"   
 import { useRef }  from "react";
 
 
@@ -76,7 +76,7 @@ const PostForm = ({images}) => {
             <input type="text" placeholder="Add music" />
           </div>
           <hr style={{ margin: "0" }} />
-          <div className="post-buttons">
+            <div className="post-buttons">
             <button className="post">Post</button>
             <button className="post">Story</button>
           </div>

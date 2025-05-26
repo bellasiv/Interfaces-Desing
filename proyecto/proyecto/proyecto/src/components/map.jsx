@@ -6,20 +6,27 @@ function Map() {
   const [markers, setMarkers] = useState([]);
 
   const mapContainer = useMemo(() => ({
-    width: "90%",
-    height: "70vh",
+    width: "70%", 
+    height: "90vh",      
     position: "absolute",
-    bottom: "20px",
-    right: "50%",
-    transform: "translateX(50%)",
-    border: "8px solid white",
-    marginTop: "40px",
-    maxWidth: "1200px",
-    '@media (max-width: 768px)': {
-      width: "95%",
-      height: "60vh",
-      border: "4px solid white",
-    }
+    right: "30px",
+    top: "150px",
+    borderRadius: "8px", // Opcional: para bordes redondeados
+    boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)", // Opcional: sombra
+    // '@media (max-width: 768px)': {
+    //   width: "95%",
+    //   height: "60vh",
+    //   right: "10px", // Ajuste para móvil (más pequeño que 70px)
+    //   top: "100px", // Menos espacio superior en móvil
+    //   left: "10px", // Centrado con margen izquierdo
+    //   margin: "0 auto", // Centrado adicional si es necesario
+    // },
+    
+    // '@media (max-width: 480px): { // Opcional: ajuste extra para pantallas muy pequeñas
+    //   top: "60px",
+    //   height: "50vh",
+    // }
+
   }), []);
 
   const center = useMemo(() => ({

@@ -1,8 +1,9 @@
 .letter-container {
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: flex-start; 
   height: 130vh;
+  /* margin-left: 20%; */
   margin-bottom: 30px; 
   padding: 0 20px;
 }
@@ -19,7 +20,7 @@
 }
 
 @media (max-width: 768px) {
-  .letter-container {
+  /* .letter-container {
     height: auto;
     padding-top: 80px;
   }
@@ -27,5 +28,5 @@
   .letter-text {
     font-size: 30px;
     top: 0;
-  }
+  } */
 }
