@@ -1,53 +1,101 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { Navbar, Nav, Container, Form, InputGroup } from 'react-bootstrap';
 import "./menu.css";
 import { FaHome, FaMap, FaCrown, FaComments, FaCamera, FaSearch, FaUserCircle } from "react-icons/fa"; 
 
 const Menu = () => {
   const location = useLocation();
+  const [expanded, setExpanded] = useState(false);
 
   const isActive = (path) => {
     return location.pathname === path ? "menu-item active" : "menu-item";
   };
 
   return (
-    <div className="menuPrincipal">
-      <div className="menu">
-        <Link to="/paginaPrincipal" className={isActive("/paginaPrincipal")}>
-          <FaHome className="icon" />
-          <span>Home</span>
-        </Link>
+    <Navbar expanded={expanded} expand="lg" className="menuPrincipal" fixed="top">
+      <Container fluid>
+        <Navbar.Toggle 
+          aria-controls="navbar-nav" 
+          onClick={() => setExpanded(expanded ? false : "expanded")}
+        />
+        <Navbar.Collapse id="navbar-nav">
+          <Nav className="me-auto menu">
+            <Nav.Link 
+              as={Link} 
+              to="/paginaPrincipal" 
+              className={isActive("/paginaPrincipal")}
+              onClick={() => setExpanded(false)}
+            >
+              <FaHome className="icon" />
+              <span className="d-none d-lg-inline ms-2">Home</span>
+            </Nav.Link>
 
-        <Link to="/petMap" className={isActive("/petMap")}>
-          <FaMap className="icon" />
-          <span>PetMap</span>
-        </Link>
+            <Nav.Link 
+              as={Link} 
+              to="/petMap" 
+              className={isActive("/petMap")}
+              onClick={() => setExpanded(false)}
+            >
+              <FaMap className="icon" />
+              <span className="d-none d-lg-inline ms-2">PetMap</span>
+            </Nav.Link>
 
-        <Link to="/ranking" className={isActive("/ranking")}>
-          <FaCrown className="icon" />
-          <span>Ranking</span>
-        </Link>
+            <Nav.Link 
+              as={Link} 
+              to="/ranking" 
+              className={isActive("/ranking")}
+              onClick={() => setExpanded(false)}
+            >
+              <FaCrown className="icon" />
+              <span className="d-none d-lg-inline ms-2">Ranking</span>
+            </Nav.Link>
 
-        <Link to="/chat" className={isActive("/chat")}>
-          <FaComments className="icon" />
-          <span>Chat</span>
-        </Link>
+            <Nav.Link 
+              as={Link} 
+              to="/chat" 
+              className={isActive("/chat")}
+              onClick={() => setExpanded(false)}
+            >
+              <FaComments className="icon" />
+              <span className="d-none d-lg-inline ms-2">Chat</span>
+            </Nav.Link>
 
-        <Link to="/post" className={isActive("/post")}>
-          <FaCamera className="icon" />
-          <span>Post</span>
-        </Link>
-      </div>
+            <Nav.Link 
+              as={Link} 
+              to="/post" 
+              className={isActive("/post")}
+              onClick={() => setExpanded(false)}
+            >
+              <FaCamera className="icon" />
+              <span className="d-none d-lg-inline ms-2">Post</span>
+            </Nav.Link>
+          </Nav>
 
-      <div className="search-container1">
-        <input type="text" placeholder="Search users" className="search-input" />
-        <FaSearch className="search-icon" />
-      </div>
+          <Form className="d-none d-lg-flex search-container1">
+            <InputGroup>
+              <Form.Control
+                type="text"
+                placeholder="Search users"
+                className="search-input"
+              />
+              <InputGroup.Text>
+                <FaSearch className="search-icon" />
+              </InputGroup.Text>
+            </InputGroup>
+          </Form>
 
-      <Link to="/perfil" className="profile">
-        <FaUserCircle className="profile-icon" />
-      </Link>
-    </div>
+          <Nav.Link 
+            as={Link} 
+            to="/perfil" 
+            className="profile ms-3"
+            onClick={() => setExpanded(false)}
+          >
+            <FaUserCircle className="profile-icon" />
+          </Nav.Link>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
 

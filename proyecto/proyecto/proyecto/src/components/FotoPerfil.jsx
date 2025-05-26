@@ -4,7 +4,7 @@ import defaultFoto from "../assets/postTres.jpg";
 
 const FotoPerfil = ({ profileImage }) => {
   return (
-    <div className="profile-picture">
+    <div className="profile-picture"> 
       <img 
         src={profileImage || defaultFoto} 
         alt="Profile"  

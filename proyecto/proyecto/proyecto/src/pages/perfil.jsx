@@ -1,4 +1,5 @@
 import React from "react";
+import { Container, Row, Col } from 'react-bootstrap';
 import Menu from "../components/menu.jsx";
 import FotoPerfil from "../components/FotoPerfil.jsx";
 import PostLateral from "../components/PostLateral.jsx";
@@ -6,14 +7,20 @@ import ProfileInfo from "../components/InfoPerfil.jsx";
 
 function Perfil({ profileImage, setProfileImage }) {  
   return (
-    <div className="perfil-container">
+    <Container fluid className="p-0">
       <Menu />
-      <FotoPerfil profileImage={profileImage} />  
-      <PostLateral/>
-      <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
-        <ProfileInfo onImageUpdate={setProfileImage} />  
-      </div>
-    </div>
+      <Row className="g-0">
+        <Col xs={12} md={4} lg={3}>
+          <FotoPerfil profileImage={profileImage} />
+        </Col>
+        <Col xs={12} md={8} lg={6}>
+          <ProfileInfo onImageUpdate={setProfileImage} />
+        </Col>
+        <Col lg={3} className="d-none d-lg-block">
+          <PostLateral />
+        </Col>
+      </Row>
+    </Container>
   );
 }
 

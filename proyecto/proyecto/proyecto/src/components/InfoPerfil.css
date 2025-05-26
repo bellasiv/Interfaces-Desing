@@ -3,13 +3,18 @@
     align-items: left;
     text-align: left;
     padding: 20px;
-    width: 600px; /* Ajusta el ancho */
-    margin-left: 250px;
-    margin-top: 60px;
-    margin-bottom: 50px;
+    width: 100%;
+    max-width: 600px;
+    margin: 60px auto 50px;
 }
 
-/* Estilo para el nombre de usuario */
+@media (max-width: 768px) {
+    .profile-info {
+        padding: 15px;
+        margin: 40px auto 30px;
+    }
+}
+
 .username {
     font-size: 25px;
     font-weight: bold;
@@ -18,27 +23,44 @@
     margin-bottom: 20px;
 }
 
+@media (max-width: 768px) {
+    .username {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+}
+
 .dropdown-icon {
     color: #C54D8C;
     margin-left: 5px;
 }
 
-/* Estilo para seguidores */
 .followers {
     font-size: 25px;
     color: #444;
     margin-bottom: 50px;
 }
 
-/* Línea divisoria */
+@media (max-width: 768px) {
+    .followers {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+}
+
 .divider {
     width: 60%;
     border: 2px dashed #C54D8C;
-    margin: 10px 0;
-    margin-bottom: 50px;
+    margin: 10px 0 50px;
 }
 
-/* Sección de actualizaciones */
+@media (max-width: 768px) {
+    .divider {
+        width: 80%;
+        margin: 10px 0 30px;
+    }
+}
+
 .updates-title {
     font-size: 18px;
     font-weight: bold;
@@ -65,4 +87,15 @@
     margin-right: 10px;
 }
 
+@media (max-width: 768px) {
+    .update {
+        padding: 6px;
+        margin-bottom: 10px;
+    }
 
+    .update-avatar {
+        width: 32px;
+        height: 32px;
+        margin-right: 8px;
+    }
+}
