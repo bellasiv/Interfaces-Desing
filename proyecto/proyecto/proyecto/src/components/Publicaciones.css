@@ -2,7 +2,6 @@
     background: #E2E0E1;
     border-radius: 15px;
     padding: 10px;
-    length: 250px;
     width: 400px; /* Ajusta el tamaño de los posts */
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -65,4 +64,19 @@
     color: #030303;
     margin: 0px;
     padding-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .post-two {
+        width: 100%; /* Hace que el post ocupe todo el ancho en pantallas pequeñas */
+        margin: 10px 0; /* Espacio entre posts */
+    }
+
+    .post-image {
+        height: 450px; /* Ajusta la altura de la imagen en pantallas pequeñas */
+    }
+
+    .user-name {
+        font-size: 12px; /* Reduce el tamaño del texto en pantallas pequeñas */
+    }   
 }

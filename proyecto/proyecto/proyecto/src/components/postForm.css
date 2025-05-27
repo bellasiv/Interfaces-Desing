@@ -7,7 +7,7 @@ body {
   gap: 10px;
   position: relative;
   top: 20px;
-  margin-left: 256px;
+  margin-left: 300px;
   flex-wrap: wrap;
   padding: 0 20px;
 }
@@ -20,7 +20,7 @@ body {
   height: 500px;
   position: relative;
   top: 120px;
-  margin-left: 55px;
+  left: 55px;
 }
 
 @media (max-width: 1200px) {
