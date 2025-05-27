@@ -4,11 +4,7 @@ import fotoUno from "../assets/fotoUno.jpg"
 import fotoDos from "../assets/fotoDos.jpg"
 import fotoTres from "../assets/fotoTres.jpg"
 
-const images = [
-  fotoUno,
-  fotoDos,
-  fotoTres,
-];
+const images = [fotoUno,fotoDos,fotoTres,];
 
 const FloatingImages = () => {
   return (

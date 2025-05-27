@@ -1,81 +1,95 @@
+/* Custom scrollbar styles */
 .image-scroll-container {
-  width: 290px;
-  height: 500px;
-  overflow-y: auto;
-  position: fixed;
-  top: 120px;
-  left: calc(256px + 230px);
-  padding: 5px;
-  border-radius: 50px;
-}
-
-@media (max-width: 1200px) {
-  .image-scroll-container {
-    width: 250px;
-    left: calc(256px + 200px);
+    width: 290px;
+    height: 500px;
+    overflow-y: auto;
+    position: absolute;
+    top: 120px;
+    left: 100px;
+    padding: 5px;
+    border-radius: 50px;
+    
+    /* Webkit scrollbar styles */
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+  
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background: #ff8833;
+      border-radius: 10px;
+    }
+  
+    &::-webkit-scrollbar-thumb:hover {
+      background: #a76f44;
+    }
+  
+    /* Firefox scrollbar styles */
+    scrollbar-width: thin;
+    scrollbar-color: #bc0394 #f1f1f1;
   }
-}
+  
+  .image-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .image-item {
+    width: 250px;
+    height: 225px;
+    object-fit: cover;
+    border: 15px solid #E2E0E1;
+    border-radius: 20px;
+  }
 
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
   .image-scroll-container {
-    width: 220px;
-    left: calc(256px + 180px);
+    width: 250px; /* Ancho fijo */
+    height: 500px; /* Altura fija */
+    top: 100px; /* Ajusta la posición vertical para tablets */
+    left: 10px; /* Ajusta la posición horizontal para tablets */
+    padding: 10px; /* Espacio interno */
+    border-radius: 20px; /* Bordes redondeados */
+    overflow-x: hidden; /* Desactiva scroll horizontal */
   }
 }
 
 @media (max-width: 768px) {
   .image-scroll-container {
-    display: none;
+    width: auto; /* 250px (imagen) + 15px (borde izquierdo) + 15px (borde derecho) */
+    height: auto; /* Altura ajustable según contenido */
+    padding: 15px; /* Espacio interno igual al borde de las imágenes */
+    position: relative; /* Cambia de absolute a relative para flujo normal */
+    top: auto; /* Resetea posición */
+    left: auto; /* Resetea posición */
+    bottom: -840px; /* Lo coloca al final de su contenedor padre */
+    margin: 0 auto; /* Centrado horizontal */
+    border-radius: 20px; /* Coincide con el borde de las imágenes */
+    overflow-x: auto; /* Scroll horizontal */
+    display: flex;
+    justify-content: center; /* Centra contenido si es necesario */
   }
-}
 
-.image-scroll-container::-webkit-scrollbar {
-  width: 10px;
-}
+  .image-list {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    padding-bottom: 10px; /* Espacio para scroll */
+    width: 100%; /* Ajuste al contenedor padre */
+  }
 
-.image-scroll-container::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 10px;
-}
-
-.image-scroll-container::-webkit-scrollbar-thumb {
-  background: #ff8833;
-  border-radius: 10px;
-}
-
-.image-scroll-container::-webkit-scrollbar-thumb:hover {
-  background: #a76f44;
-}
-
-.image-scroll-container {
-  scrollbar-width: thin;
-  scrollbar-color: #bc0394 #f1f1f1;
-}
-
-.image-list {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.image-item {
-  width: 250px;
-  height: 225px;
-  object-fit: cover;
-  border: 15px solid #E2E0E1;
-  border-radius: 20px;
-}
-
-@media (max-width: 1200px) {
   .image-item {
-    width: 220px;
-    height: 200px;
+    flex: 0 0 250px; /* Ancho fijo igual al original */
+    height: 225px; /* Altura fija */
+    aspect-ratio: 1/1; /* Opcional: si prefieres cuadrados */
+    scroll-snap-align: start;
+    object-fit: cover;
+    border: 15px solid #E2E0E1;
+    border-radius: 20px;
   }
-}
-
-@media (max-width: 992px) {
-  .image-item {
-    width: 190px;
-    height: 180px;
-  }
-}
+} 
