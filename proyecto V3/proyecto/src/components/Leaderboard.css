@@ -1,0 +1,101 @@
+.leaderboard {
+  background: white;
+  border-radius: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  padding-left: 2rem; /* Cambiado de 230px a 2rem para alinear a la izquierda */
+  margin-left: 270px;
+  max-width: calc(89% - 340px);
+  overflow: hidden;
+}
+
+.leaderboard-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #b77a2f;
+  text-align: left;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+  font-family: 'Myriad Pro', serif;
+}
+
+.leaderboard-list {
+  max-height: 500px;
+  min-height: 400px; 
+  overflow-y: auto;
+  padding: 0 1rem;
+  scrollbar-width: thin;
+  scrollbar-color: #c68331 #f0f0f0;
+  width: 100%;
+}
+
+.leaderboard-list::-webkit-scrollbar {
+  width: 1px;
+}
+
+.leaderboard-list::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 2px;
+}
+
+.leaderboard-list::-webkit-scrollbar-thumb {
+  background: #b86500;
+  border-radius: 4px;
+}
+
+.leaderboard-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  margin-bottom: 0.9rem;
+  background: #f8f8f8;
+  transition: transform 0.2s ease;
+  width: calc(100% - 2rem);
+  
+}
+
+.leaderboard-item:hover {
+  transform: translateX(5px);
+  background: #f0f0f0;
+}
+
+.rank {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #cd7912;
+  width: 40px;
+}
+
+.user-info {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.username {
+  font-weight: normal; /* Quitamos la negrita */
+  color: #666;
+  font-family: 'Source Sans Variable', sans-serif;
+  margin-top: 5px; /* Ajustamos la posición vertical */
+}
+
+.points {
+  font-weight: bold;
+  color: #333;
+  margin-left: auto;
+  background: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}

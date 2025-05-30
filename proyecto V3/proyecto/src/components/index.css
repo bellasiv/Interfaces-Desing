@@ -1,0 +1,11 @@
+/* index.css o App.css */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;  /* evita scroll horizontal innecesario */
+  overflow-y: auto;    /* solo permite scroll si es necesario */
+  box-sizing: border-box;
+  font-family: sans-serif; /* opcional: tipografía global */
+}

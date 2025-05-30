@@ -1,0 +1,116 @@
+  body {
+    overflow-x: hidden;
+  }
+
+  .content {
+    display: flex;
+    gap: 10px;
+    position: relative;
+    top: 20px;  /* Mueve hacia abajo */
+    left: 300px; /* Mueve hacia la derecha */
+
+  }
+  
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.00001px;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    top: 120px;  /* Mueve hacia abajo */
+    left: 55px; /* Mueve hacia la derecha */
+  }
+  
+  .gallery img {
+    width: 90%;
+    height: 90%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .gallery img.selected {
+    border: 4px solid orange;
+  }
+  
+  .post-section {
+    width: 350px;
+    height: 450px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.558);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+    position: relative;
+    align-items: center;
+    top: 100px;  /* Mueve hacia abajo */
+    left: -130px; /* Mueve hacia la derecha */
+  }
+  
+  .preview {
+    width: 80%;
+    height: 45%;
+    border-radius: 7px;
+    object-fit: cover;
+  }
+  
+  .post-buttons button {
+    padding: 10px;
+    width: 45%;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .post {
+    background-color: #d68c45;
+    color: white;
+  }
+
+  .browse {
+    background-color: #d68c45;
+    color: white;
+    width: 200px;
+    height: 30px;
+    position: relative;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    top: 620px;  /* Mueve hacia abajo */
+    left: -310px; /* Mueve hacia la derecha */
+  }
+  
+  .tag-btn,
+  .music-btn {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    background-color: #f8e1c2;
+  }
+  
+  .location button {
+    background-color: #e5c09f;
+    border: none;
+    padding: 8px;
+    margin: 5px;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+   input {
+    background-color: rgb(246, 245, 245);
+    width: 90%; /* Ocupa todo el ancho disponible */
+    padding: 10px; /* Espacio interno para que el texto no esté pegado */
+    border: none; /* Borde gris */
+    font-size: 16px; /* Tamaño de letra */
+    outline: none; /* Quita el borde azul al hacer clic */
+    transition: border 0.3s;
+    color: rgb(84, 84, 84); /* Cambia el color del texto */
+    }
+  

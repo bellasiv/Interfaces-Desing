@@ -1,0 +1,68 @@
+.profile-info {
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+    padding: 20px;
+    width: 600px; /* Ajusta el ancho */
+    margin-left: 250px;
+    margin-top: 60px;
+    margin-bottom: 50px;
+}
+
+/* Estilo para el nombre de usuario */
+.username {
+    font-size: 25px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.dropdown-icon {
+    color: #C54D8C;
+    margin-left: 5px;
+}
+
+/* Estilo para seguidores */
+.followers {
+    font-size: 25px;
+    color: #444;
+    margin-bottom: 50px;
+}
+
+/* Línea divisoria */
+.divider {
+    width: 60%;
+    border: 2px dashed #C54D8C;
+    margin: 10px 0;
+    margin-bottom: 50px;
+}
+
+/* Sección de actualizaciones */
+.updates-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.updates {
+    width: 100%;
+}
+
+.update {
+    display: flex;
+    align-items: center;
+    background-color: #e6e6e6;
+    padding: 8px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.update-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+

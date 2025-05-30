@@ -1,0 +1,46 @@
+.contact-list {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 10px;
+  transition: background 0.2s ease;
+}
+
+.contact-item:hover {
+  background-color: #f0f0f0;
+}
+
+.contact-item.active {
+  background-color: #dcefff;
+}
+
+.contact-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-name {
+  font-weight: bold;
+}
+
+.contact-last-message {
+  font-size: 0.85rem;
+  color: #666;
+}

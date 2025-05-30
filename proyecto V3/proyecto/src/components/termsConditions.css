@@ -1,0 +1,61 @@
+.terms-container {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.read-more-link {
+  display: block;
+  text-align: center;
+  color: #007bff;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; /* usa vw para evitar desbordamientos */
+  height: 100vh;
+  background: transparent !important; /* fuerza sin fondo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.terms-modal {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: none !important; /* elimina sombra negra */
+  position: relative;
+  z-index: 10000;
+  transform: translate(-600px, -480px); /* Ajustalo como necesites */
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.accept-button,
+.cancel-button {
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.accept-button {
+  background: rgb(96, 169, 96);
+  color: white;
+}
+
+.cancel-button {
+  background: rgb(186, 92, 92);
+  color: white;
+}
